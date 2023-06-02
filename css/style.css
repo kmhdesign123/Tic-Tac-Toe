@@ -1,0 +1,87 @@
+body {
+  background-color: #070119;
+/* Use a system font, if none are available use an available sans-sarif   font */
+font-family: 'Inconsolata', monospace;
+margin: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.neonText {
+animation: flicker 2.5s infinite alternate;
+}
+
+h1 {
+font-family: 'Satisfy', cursive;
+margin: 2vmin;
+color: #FC157C;
+font-size: 10vmin;
+}
+
+/* Flickering animation */
+@keyframes flicker {   
+0%, 18%, 22%, 25%, 53%, 57%, 100% {
+text-shadow:
+0 0 7px #ffc0dc,
+0 0 10px #ffa6ce,
+0 0 21px #ffa6ce,
+0 0 42px #ff68ac,
+0 0 82px #ff68ac,
+0 0 92px #ff68ac;
+}
+20% {        
+text-shadow: none;
+}
+}
+
+h2 {
+margin: 0;
+color: #FC157C;
+font-size: 2vmin;
+}
+
+h3 {
+color: #fd81bc;
+font-size: 5vmin;
+}
+
+section.board {
+display: grid;
+grid-template-rows: repeat(3, 15vmin);
+grid-template-columns: repeat(3, 15vmin);
+grid-gap: 2vmin;
+color : #7e4fb6;
+}
+.sqr {
+text-align: center;
+}
+
+div {
+background-color: #220B4D;
+border: 1px solid #070119;
+font-size: 15vmin;
+text-align: center;
+vertical-align: middle;
+}
+
+button {
+background-color: #070119;
+border: 2px solid #FED631;
+border-radius: 12px;
+color: #FED631;
+padding: 2vmin 10vmin;
+margin: 4vmin;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 5vmin;
+}
+button:hover {
+background-color: #FED631;
+color: #FED631;
+border: 2px solid #FED631;
+color: #070119;
+font-weight: 400;
+}
